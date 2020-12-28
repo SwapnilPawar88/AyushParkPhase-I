@@ -23,6 +23,7 @@
             </div>
             <div class="row justify-content-center">
 				<div class="col-xs-12 col-md-6 col-lg-6">
+                    <asp:Label ID="adminPass" runat="server" Text="Password" Font-Size="Large"></asp:Label>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="adminPassword" ErrorMessage="*Please Enter Password" ForeColor="#FF3300"></asp:RequiredFieldValidator>
                     <asp:TextBox ID="adminPassword" runat="server" CssClass="form-control" Height="40px" Width="300px" TextMode="Password"></asp:TextBox>
 				</div>
