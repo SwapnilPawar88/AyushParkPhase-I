@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table style="width:100%; margin:0 auto;font-family:Algerian">
+        <tr style="height:40px;background-color:#fff">
+            <td style="width:10%">
+                <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/images/logo.jfif" Height="80px" Width="200px" PostBackUrl="~/index.aspx"/></td>
+            <td style="width:40%"><h1><b>VEDA VENTURES</b></h1></td>
+            <td style="width:50%; text-align:right">
+                <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/images/facebook.png" Height="50px" PostBackUrl="~/index.aspx" OnClick="ImageButton2_Click"/>&nbsp;
+                <asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/images/insta.png" Height="50px" PostBackUrl="~/index.aspx" OnClick="ImageButton3_Click"/>&nbsp;
+                <asp:ImageButton ID="ImageButton4" runat="server" ImageUrl="~/images/youtube.png" Height="50px" onClick="ytdemo" />&nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="height:20px;text-align:center;background-color:#109196"><h1><b>Commander's &nbsp;&nbsp;&nbsp;Aayush &nbsp;&nbsp;&nbsp;Park&nbsp;&nbsp;&nbsp; Phase- I</b></h1></td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <asp:Menu ID="Menu1" runat="server" BackColor="Black" BorderColor="White" Font-Size="Large" ForeColor="White" Height="35px" Orientation="Horizontal" Width="100%">
+                    <DynamicHoverStyle BackColor="Yellow" BorderColor="White" BorderStyle="Groove" ForeColor="Black" />
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="index.aspx"></asp:MenuItem>                
+                        <asp:MenuItem Text="Loign" Value="Loign" NavigateUrl="Login.aspx"></asp:MenuItem>                
+                        <asp:MenuItem Text="Register" Value="Register" NavigateUrl="Registration.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Gallery" Value="Gallery" NavigateUrl="Gallery.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Complaint" Value="Complaint" NavigateUrl="Complaint.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Event" Value="Event" NavigateUrl="clubHouseBooking.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Feedback" Value="Feedback" NavigateUrl="Feedback.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Admin" Value="Admin" NavigateUrl="admin_Login.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="Yellow" BorderColor="White" ForeColor="Black" />
+                    <StaticMenuItemStyle HorizontalPadding="30px" />
+                </asp:Menu>
+            </td>
+        </tr>
+        </table>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form><!--footer-->
+    <table style="border-bottom: 5px solid grey;border-top:5px solid grey; font-family: verdana; color: white;background-color:black;width:100%">
+        <tr>
+            <td>
+                <h4>About Us</h4><br/>
+                <b>Commander's Aayush Park Phase-1</b><br/>
+		        <p>Near D Y Patil Patil College</p><br/>
+                <p>varale, tal: Maval</p><br/>
+		        <p>Talegaon Pune, Maharashtra 410507</p><br/> 
+            </td>
+            <td>
+                <h4>Contact Us</h4><br/>
+                <p>Telephone: 1234567890 /1234567890<br/><br /><br />
+                   Mobile: 1234567890 /1234567890<br/><br /><br />  
+                  <b>Management Committee</b> <br />
+                  <b>ADDA Moderators</b> <br /><br /> 
+		           Email:aayushpark@gmail.com</p>
+            </td>
+            <td><h4>Location</h4><br />
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3778.186958325646!2d73.68592899955306!3d18.745184287216127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b372808cf3c9%3A0xc0ac550d808f5326!2sCommander&#39;s%20Aayush%20Park!5e0!3m2!1sen!2sin!4v1586672481525!5m2!1sen!2sin" width="400" height="220"></iframe>
+
+            </td>
+        </tr>
+    </table>
+    <p style="background-color:black;color:white;font-style:oblique;font-family:Verdana;text-align:center;height:30px;padding:8px">© 2020 Copyright: Developed By - Prajakta Patil and Swapnil Pawar</p>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
